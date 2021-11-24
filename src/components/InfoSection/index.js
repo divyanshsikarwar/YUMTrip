@@ -55,12 +55,14 @@ import {
   SidebarLinksignup,
   SidebarWrapper,
   SidebarRoute,
-  SidebarMenu
+  SidebarMenu,
+  FooterIcon
 } from "./InfoElements";
 import { Button } from "./ButtonElement";
 import Icon1 from "../../images/svg-4.svg";
 import Icon2 from "../../images/svg-5.svg";
 import Icon3 from "../../images/svg-6.svg";
+import Icon4 from "../../images/github.png"
 import { animateScroll as scroll } from "react-scroll";
 import Video from "../../video/video.mp4";
 
@@ -314,6 +316,11 @@ const Footer = () => {
           <FooterLinkItems>
             <FooterLink to="/contactus">Conatct Us</FooterLink>
           </FooterLinkItems>
+        </FooterLinksContainer>
+        <FooterLinksContainer >
+        <a href="https://github.com/divyanshsikarwar/YumTrip-FrontEnd"><FooterIcon src={Icon4} /></a>
+        
+          
         </FooterLinksContainer>
         <FooterCopyRight>
           {" "}

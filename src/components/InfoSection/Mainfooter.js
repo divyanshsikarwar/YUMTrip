@@ -1,5 +1,6 @@
 import React from 'react'
-import { FooterContainer,FooterWrap, FooterLinkTitle, FooterLinkSubtitle, FooterLinksContainer,FooterLinkItems, FooterLink, FooterCopyRight } from './InfoElements'
+import { FooterContainer,FooterWrap,FooterIcon, FooterLinkTitle, FooterLinkSubtitle, FooterLinksContainer,FooterLinkItems, FooterLink, FooterCopyRight } from './InfoElements'
+import Icon4 from "../../images/github.png"
 const Mainfooter = () => {
     return (
         <FooterContainer>
@@ -23,6 +24,11 @@ const Mainfooter = () => {
                 <FooterLink to="/contactus">Conatct Us</FooterLink>
             </FooterLinkItems>
             </FooterLinksContainer>
+            <FooterLinksContainer >
+        <a href="https://github.com/divyanshsikarwar/YumTrip-FrontEnd"><FooterIcon src={Icon4} /></a>
+        
+          
+        </FooterLinksContainer>
             <FooterCopyRight>
             {" "}
             &copy; YumTrip {new Date().getFullYear()}

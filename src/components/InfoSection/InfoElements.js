@@ -641,6 +641,12 @@ export const FooterLink = styled(LinkR)`
         transition: 0.3s ease-out;
     }
 `;
+export const FooterIcon = styled.img`
+    height: 32px;
+    width: 32px;
+    margin-bottom: 20px;
+    
+`;
 
 export const FooterCopyRight = styled.small`
     color: #ffffff;
