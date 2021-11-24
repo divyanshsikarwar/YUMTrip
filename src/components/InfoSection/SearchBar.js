@@ -62,7 +62,7 @@ function SearchBar({ placeholder }) {
       setFilteredData(newFilter);
     }
   };
-
+  var dict = {};
   return (
     <>
       <div className="search">
@@ -81,12 +81,17 @@ function SearchBar({ placeholder }) {
               <option value={1}> City</option>
               {data &&
                 data.map((cities) => {
-                  return <option value={cities.city}> {cities.city} </option>;
+                  if(cities.city in dict){
+                    return ""
+                  }
+                  else{
+                    dict[cities.city]=1;
+                    return <option value={cities.city}> {cities.city} </option>;
+                  }
                 })}
 
-              <option value={"Delhi"}>Delhi</option>
-              <option value={"Noida"}>Noida</option>
-              <option value={"Hyderabbad"}>Hyderabad</option>
+              
+              <option value={"Hyderabad"}>Hyderabad</option>
             </NativeSelect>
           </div>
         </FormControl>
