@@ -226,8 +226,8 @@ export default function HorizontalLinearStepper() {
         bucketName: "restraimagestore",
         dirName: "logo",
         region: "us-east-2",
-        accessKeyId: process.env.REACT_APP_AWS_ACCESSKEY,
-        secretAccessKey: process.env.REACT_APP_AWS_SECRETKEY,
+        accessKeyId: process.env.AWS_ACCESSKEY,
+        secretAccessKey: process.env.AWS_SECRETKEY,
       };
       await ReactS3.uploadFile(newFile, config)
         .then((data) => {
