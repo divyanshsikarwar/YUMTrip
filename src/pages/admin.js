@@ -155,7 +155,7 @@ export default function App(props) {
 
   if (Notification.permission != "granted") {
     Notification.requestPermission().then(function (permission) {
-      console.log(permission);
+      ;
     });
   }
 

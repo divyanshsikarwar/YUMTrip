@@ -24,7 +24,7 @@ function createArray(arr) {
 }
 
 async function downloadInvoice(input) {
-  console.log(input)
+  
   var data = {
     //"documentTitle": "RECEIPT", //Defaults to INVOICE
     //"locale": "de-DE", //Defaults to en-US, used for number formatting (see docs)

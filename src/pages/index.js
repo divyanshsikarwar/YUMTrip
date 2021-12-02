@@ -10,10 +10,7 @@ import {
 } from "../components/InfoSection";
 import { homeObjOne, homeObjTwo } from "../components/InfoSection/Data";
 
-console.log(
-  process.env.REACT_APP_AWS_SECRETKEY,
-  process.env.REACT_APP_AWS_ACCESSKEY
-);
+
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);

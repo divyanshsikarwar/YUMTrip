@@ -269,7 +269,7 @@ export default function HorizontalLinearStepper() {
     });
   }
   async function VerifyCode() {
-    console.log("adsasdfadsf");
+    
     var xx = await axios.post(
       "https://yumtrip.herokuapp.com/verifyActivationCode",
       {
@@ -277,7 +277,7 @@ export default function HorizontalLinearStepper() {
         code: verificationCode,
       }
     );
-    console.log(xx.data);
+    
     return xx.data;
   }
 
@@ -582,7 +582,7 @@ export default function HorizontalLinearStepper() {
   };
 
   const buttonreturn = (val) => {
-    console.log(val);
+    
     if (val === 0) {
       return "Check and Procced";
     } else if (val === 1) {
@@ -602,9 +602,9 @@ export default function HorizontalLinearStepper() {
       }
       sendVerificationCode();
     } else if (value === 1) {
-      console.log("sdafdasasdf");
+      
       var ret = await VerifyCode();
-      console.log(ret);
+      
       if (ret.bool === false && ret.expire === false) {
         updateerrmsg("Wrong Code Entered.");
         handleClickerr();
