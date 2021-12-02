@@ -196,8 +196,8 @@ export default function HowItWorks() {
               </div>
               <div className="bee-col bee-col-2 bee-col-w7">
                 <div className="bee-block bee-block-1 bee-image">
-                  <a href="www.example.com">
-                    <img alt="Black Headphone" className="bee-center bee-fixedwidth" src="https://i.ibb.co/8gT2qtD/imageonline-co-roundcorner.png" style={{maxWidth: '630px'}} /></a>
+                  
+                    <img alt="Black Headphone" className="bee-center bee-fixedwidth" src="https://i.ibb.co/8gT2qtD/imageonline-co-roundcorner.png" style={{maxWidth: '630px'}} />
                 </div>
               </div>
             </div>
@@ -210,8 +210,8 @@ export default function HowItWorks() {
                   </div>
                 </div>
                 <div className="bee-block bee-block-2 bee-image">
-                  <a href="www.example.com">
-                    <img alt="View All Items" className="bee-center bee-fixedwidth" src="https://i.ibb.co/Y38q5X6/imageonline-co-roundcorner-1.png" style={{maxWidth: '722px'}} /></a>
+                  
+                    <img alt="View All Items" className="bee-center bee-fixedwidth" src="https://i.ibb.co/Y38q5X6/imageonline-co-roundcorner-1.png" style={{maxWidth: '722px'}} />
                 </div>
               </div>
               <div className="bee-col bee-col-2 bee-col-w5">
@@ -298,8 +298,7 @@ export default function HowItWorks() {
               </div>
               <div className="bee-col bee-col-2 bee-col-w7">
                 <div className="bee-block bee-block-1 bee-image">
-                  <a href="www.example.com">
-                    <img alt="Black Headphone" className="bee-center bee-fixedwidth" src="https://i.ibb.co/xX1YDwW/imageonline-co-roundcorner.png" style={{maxWidth: '462px'}} /></a>
+                  <img alt="Black Headphone" className="bee-center bee-fixedwidth" src="https://i.ibb.co/xX1YDwW/imageonline-co-roundcorner.png" style={{maxWidth: '462px'}} />
                 </div>
               </div>
             </div>
