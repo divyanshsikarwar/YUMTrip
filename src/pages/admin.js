@@ -183,7 +183,7 @@ export default function App(props) {
         setSocket(io("https://yumtrip.herokuapp.com/"));
       }
     }
-    op();
+    op(); 
   }, []);
 
   React.useEffect(() => {
