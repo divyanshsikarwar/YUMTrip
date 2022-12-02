@@ -130,7 +130,7 @@ function App() {
     async function op() {
       handleOpen();
       var x = await axios.post(
-        "https://yumtrip.herokuapp.com/GetItemsForMenuManager",
+        "https://yumtrip-backend.onrender.com/GetItemsForMenuManager",
         {
           session: localStorage.getItem("SESS"),
         }

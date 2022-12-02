@@ -75,7 +75,7 @@ export default function RecipeReviewCard() {
     async function op() {
       handleOpen();
       var x = await axios.post(
-        "https://yumtrip.herokuapp.com/GetActiveOrders",
+        "https://yumtrip-backend.onrender.com/GetActiveOrders",
         {
           session: localStorage.getItem("SESS"),
           type: "All",

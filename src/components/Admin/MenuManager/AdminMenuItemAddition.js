@@ -94,7 +94,7 @@ export default function ResponsiveDialog() {
   async function proceed() {
     if (allgood() === true) {
       setOpen(false);
-      await axios.post("https://yumtrip.herokuapp.com/adminItemEdit", {
+      await axios.post("https://yumtrip-backend.onrender.com/adminItemEdit", {
         session: localStorage.getItem("SESS"),
         type: "addition",
         name: name,

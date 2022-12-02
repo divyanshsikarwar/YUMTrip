@@ -126,7 +126,7 @@ function App() {
   useEffect(() => {
     async function op() {
       var x = await axios.post(
-        "https://yumtrip.herokuapp.com/GetItemsForUser",
+        "https://yumtrip-backend.onrender.com/GetItemsForUser",
         {
           key: storeid,
         }

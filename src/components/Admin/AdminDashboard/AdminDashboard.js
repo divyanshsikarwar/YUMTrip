@@ -41,7 +41,7 @@ export default function App() {
     async function op() {
       handleOpen();
       var x = await axios.post(
-        "https://yumtrip.herokuapp.com/GetDasboardData",
+        "https://yumtrip-backend.onrender.com/GetDasboardData",
         {
           session: localStorage.getItem("SESS"),
         }

@@ -24,7 +24,7 @@ function SearchBar({ placeholder }) {
   React.useEffect(() => {
     async function op() {
       var x = await axios.post(
-        "https://yumtrip.herokuapp.com/getSearchData",
+        "https://yumtrip-backend.onrender.com/getSearchData",
         {}
       );
       updateData(x.data.data);
@@ -81,16 +81,14 @@ function SearchBar({ placeholder }) {
               <option value={1}> City</option>
               {data &&
                 data.map((cities) => {
-                  if(cities.city in dict){
-                    return ""
-                  }
-                  else{
-                    dict[cities.city]=1;
+                  if (cities.city in dict) {
+                    return "";
+                  } else {
+                    dict[cities.city] = 1;
                     return <option value={cities.city}> {cities.city} </option>;
                   }
                 })}
 
-              
               <option value={"Hyderabad"}>Hyderabad</option>
             </NativeSelect>
           </div>

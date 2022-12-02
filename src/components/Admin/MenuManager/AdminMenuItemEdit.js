@@ -96,7 +96,7 @@ export default function ResponsiveDialog(recieve) {
   async function proceed() {
     if (allgood() === true) {
       setOpen(false);
-      await axios.post("https://yumtrip.herokuapp.com/adminItemEdit", {
+      await axios.post("https://yumtrip-backend.onrender.com/adminItemEdit", {
         session: localStorage.getItem("SESS"),
         type: "edit",
         itemkey: recieve.keyy,
@@ -109,7 +109,7 @@ export default function ResponsiveDialog(recieve) {
     }
   }
   async function deleteitem() {
-    await axios.post("https://yumtrip.herokuapp.com/adminItemEdit", {
+    await axios.post("https://yumtrip-backend.onrender.com/adminItemEdit", {
       session: localStorage.getItem("SESS"),
       type: "delete",
       itemkey: recieve.keyy,

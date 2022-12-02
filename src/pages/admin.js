@@ -154,9 +154,7 @@ export default function App(props) {
   const [openSnack, setopenSnack] = React.useState(false);
 
   if (Notification.permission != "granted") {
-    Notification.requestPermission().then(function (permission) {
-      ;
-    });
+    Notification.requestPermission().then(function (permission) {});
   }
 
   const { history } = props;
@@ -170,9 +168,12 @@ export default function App(props) {
         window.open("https://yumtrip.netlify.app/#/signin", "_self");
         return;
       }
-      var x = await axios.post("https://yumtrip.herokuapp.com/LoginCheck", {
-        session: localStorage.getItem("SESS"),
-      });
+      var x = await axios.post(
+        "https://yumtrip-backend.onrender.com/LoginCheck",
+        {
+          session: localStorage.getItem("SESS"),
+        }
+      );
       if (x.data.bool === false) {
         updateView(false);
         window.open("https://yumtrip.netlify.app/#/signin", "_self");
@@ -180,10 +181,10 @@ export default function App(props) {
       } else {
         updateView(true);
         updateStoreid(x.data.key);
-        setSocket(io("https://yumtrip.herokuapp.com/"));
+        setSocket(io("https://yumtrip-backend.onrender.com/"));
       }
     }
-    op(); 
+    op();
   }, []);
 
   React.useEffect(() => {

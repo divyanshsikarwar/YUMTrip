@@ -90,9 +90,12 @@ export default function SignIn() {
       ) {
         return;
       }
-      var x = await axios.post("https://yumtrip.herokuapp.com/LoginCheck", {
-        session: localStorage.getItem("SESS"),
-      });
+      var x = await axios.post(
+        "https://yumtrip-backend.onrender.com/LoginCheck",
+        {
+          session: localStorage.getItem("SESS"),
+        }
+      );
       if (x.data.bool === false) {
         return;
       } else {
@@ -103,13 +106,12 @@ export default function SignIn() {
   }, []);
 
   async function validate() {
-    
     var data = {
       email: enteredEmail.toLowerCase(),
       password: crypto.createHash("sha1").update(enteredPass).digest("hex"),
     };
     const resp = await axios.post(
-      "https://yumtrip.herokuapp.com/adminsignin",
+      "https://yumtrip-backend.onrender.com/adminsignin",
       data
     );
     if (resp.data.bool === false) {
@@ -125,7 +127,6 @@ export default function SignIn() {
       window.open("/#/admin/dashboard", "_self");
     }
   }
-
 
   return (
     <>
@@ -150,7 +151,6 @@ export default function SignIn() {
               name="email"
               autoComplete="email"
               onChange={handleemailchange}
-              
               autoFocus
             />
             <TextField
@@ -171,7 +171,6 @@ export default function SignIn() {
                       aria-label="toggle password visibility"
                       onClick={handleClickShowPassword}
                       onMouseDown={handleMouseDownPassword}
-                      
                     >
                       {showPassword ? <Visibility /> : <VisibilityOff />}
                     </IconButton>
@@ -216,10 +215,6 @@ export default function SignIn() {
       </Snackbar>
 
       <Mainfooter />
-     
     </>
-  
   );
-
-  
 }

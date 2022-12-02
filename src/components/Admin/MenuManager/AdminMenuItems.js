@@ -132,7 +132,7 @@ function App(dish) {
 
     setLoading((prevLoading) => !prevLoading);
     const ret = await axios.post(
-      "https://yumtrip.herokuapp.com/adminItemEdit",
+      "https://yumtrip-backend.onrender.com/adminItemEdit",
       {
         session: localStorage.getItem("SESS"),
         type: "availability",

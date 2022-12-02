@@ -120,21 +120,27 @@ export default function RecipeReviewCard(orderdetails) {
   }, []);
 
   async function handleComplete() {
-    let x = await axios.post("https://yumtrip.herokuapp.com/UpdateOrders", {
-      session: localStorage.getItem("SESS"),
-      type: "Complete",
-      orderno: orderdetails.orderno,
-    });
+    let x = await axios.post(
+      "https://yumtrip-backend.onrender.com/UpdateOrders",
+      {
+        session: localStorage.getItem("SESS"),
+        type: "Complete",
+        orderno: orderdetails.orderno,
+      }
+    );
     if (x.data.bool) {
       window.location.reload();
     }
   }
   async function handleCancel() {
-    let x = await axios.post("https://yumtrip.herokuapp.com/UpdateOrders", {
-      session: localStorage.getItem("SESS"),
-      type: "Cancel",
-      orderno: orderdetails.orderno,
-    });
+    let x = await axios.post(
+      "https://yumtrip-backend.onrender.com/UpdateOrders",
+      {
+        session: localStorage.getItem("SESS"),
+        type: "Cancel",
+        orderno: orderdetails.orderno,
+      }
+    );
     if (x.data.bool) {
       window.location.reload();
     }

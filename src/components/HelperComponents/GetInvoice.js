@@ -18,7 +18,7 @@ export default function GetInvoice() {
   const [show, updateSHow] = useState(false);
   React.useEffect(() => {
     async function op() {
-      var x = await axios.post("https://yumtrip.herokuapp.com/invoice", {
+      var x = await axios.post("https://yumtrip-backend.onrender.com/invoice", {
         key: storeid,
         id: invoiceid,
       });

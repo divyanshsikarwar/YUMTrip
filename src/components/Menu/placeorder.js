@@ -243,13 +243,13 @@ function App(props) {
   useEffect(() => {
     async function op() {
       var x = await axios.post(
-        "https://yumtrip.herokuapp.com/GetItemsForUser",
+        "https://yumtrip-backend.onrender.com/GetItemsForUser",
         {
           key: storeid,
         }
       );
       updatedata(x.data);
-      setSocket(io("https://yumtrip.herokuapp.com/"));
+      setSocket(io("https://yumtrip-backend.onrender.com/"));
     }
     op();
     return () => {
@@ -419,7 +419,7 @@ function App(props) {
     sessionStorage.setItem("food", "");
     updateInvoiceData(orderitmes);
     updateBool(true);
-    await axios.post("https://yumtrip.herokuapp.com/neworder", {
+    await axios.post("https://yumtrip-backend.onrender.com/neworder", {
       key: storeid,
       name: name,
       email: email,

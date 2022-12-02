@@ -38,9 +38,12 @@ function App(props) {
   const [dataa, updatedata] = useState(false);
   useEffect(() => {
     async function op() {
-      var x = await axios.post("https://yumtrip.herokuapp.com/GetQRDetails", {
-        session: localStorage.getItem("SESS"),
-      });
+      var x = await axios.post(
+        "https://yumtrip-backend.onrender.com/GetQRDetails",
+        {
+          session: localStorage.getItem("SESS"),
+        }
+      );
       updatedata(x.data);
     }
     if (!props.admin) {

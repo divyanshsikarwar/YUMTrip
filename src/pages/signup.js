@@ -257,27 +257,32 @@ export default function HorizontalLinearStepper() {
   }
 
   async function emailexist() {
-    const resp = await axios.post("https://yumtrip.herokuapp.com/check", {
-      email: emailid,
-    });
+    const resp = await axios.post(
+      "https://yumtrip-backend.onrender.com/check",
+      {
+        email: emailid,
+      }
+    );
     return resp.data.ans;
   }
 
   async function sendVerificationCode() {
-    await axios.post("https://yumtrip.herokuapp.com/sendActivationMail", {
-      email: emailid,
-    });
+    await axios.post(
+      "https://yumtrip-backend.onrender.com/sendActivationMail",
+      {
+        email: emailid,
+      }
+    );
   }
   async function VerifyCode() {
-    
     var xx = await axios.post(
-      "https://yumtrip.herokuapp.com/verifyActivationCode",
+      "https://yumtrip-backend.onrender.com/verifyActivationCode",
       {
         email: emailid,
         code: verificationCode,
       }
     );
-    
+
     return xx.data;
   }
 
@@ -298,7 +303,7 @@ export default function HorizontalLinearStepper() {
       image: retval[1],
       items: [],
     };
-    axios.post("https://yumtrip.herokuapp.com/adminsignup", tempdata);
+    axios.post("https://yumtrip-backend.onrender.com/adminsignup", tempdata);
   }
 
   async function allgood() {
@@ -582,7 +587,6 @@ export default function HorizontalLinearStepper() {
   };
 
   const buttonreturn = (val) => {
-    
     if (val === 0) {
       return "Check and Procced";
     } else if (val === 1) {
@@ -602,9 +606,8 @@ export default function HorizontalLinearStepper() {
       }
       sendVerificationCode();
     } else if (value === 1) {
-      
       var ret = await VerifyCode();
-      
+
       if (ret.bool === false && ret.expire === false) {
         updateerrmsg("Wrong Code Entered.");
         handleClickerr();
