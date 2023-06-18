@@ -409,7 +409,7 @@ export default function HorizontalLinearStepper() {
 
                 <Grid container justifyContent="flex-end">
                   <Grid item>
-                    <Link href="/signin" variant="body2">
+                    <Link variant="body2" href="/#/signin">
                       Already Registered? Sign in
                     </Link>
                   </Grid>
@@ -449,7 +449,7 @@ export default function HorizontalLinearStepper() {
 
                   <Grid container justifyContent="flex-end">
                     <Grid item>
-                      <Link href="/signin" variant="body2">
+                      <Link variant="body2" onClick={resendVerificationCode}>
                         Didn't Got any Email ? Resend Email.
                       </Link>
                     </Grid>
@@ -597,6 +597,15 @@ export default function HorizontalLinearStepper() {
       return "Signin";
     }
   };
+
+  async function resendVerificationCode() {
+    var ret = await allgood();
+      if (ret === false) {
+        return;
+      }
+      updatesuccessmsg("Email Sent Again")
+      sendVerificationCode();
+  }
 
   async function handleNext(value) {
     if (value === 0) {
